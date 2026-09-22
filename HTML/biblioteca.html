@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Cursos</title>
+  <link rel="stylesheet" href="../CSS/style03.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">R</a>
+      <ul class="nav-links" id="menuNav">
+        <li><a href="../index.html">Central</a></li>
+        <li><a href="../HTML/sobre.html">Sobre</a></li>
+        <li><a href="../HTML/faq.html">FAQ</a></li>
+        <li><a href="../HTML/biblioteca.html">Biblioteca</a></li>
+        <li><a href="../HTML/servicos.html">Serviços</a></li>
+        <li><a href="../HTML/contatos.html">Contato</a></li>
+        <li id="menuCadastro"><a href="../HTML/cadastro.html">Trabalhe conosco</a></li>
+        <li id="menuLogin"><a href="../HTML/login.html">Login</a></li>
+        <li id="menuConta" style="display: none;"><a href="../HTML/dados.html">Dados da Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="biblioteca-page">
+    <section class="filtros-container">
+      <h2>Filtrar cursos</h2>
+      <form id="filtrosForm">
+        <input type="text" id="buscaCurso" placeholder="Procurar curso..." />
+        <button type="button" id="limparFiltros" class="btn-sair">Limpar</button>
+      </form>
+    </section>
+
+    <section id="cursosContainer" class="cursos-container">
+      <!-- Os cursos são gerados via JS -->
+    </section>
+
+    <section id="cursoModal" class="curso-modal hidden">
+      <section class="curso-modal-conteudo">
+        <button id="fecharModal" class="btn-sair">Fechar</button>
+        <h2 id="modalTitulo"></h2>
+        <p id="modalResumo"></p>
+        <section class="video-wrapper hidden">
+          <video id="modalVideo" controls></video>
+        </section>
+        <section class="curso-infos">
+          <p><strong>Modalidade:</strong> <span id="modalModalidade"></span></p>
+          <p><strong>Local:</strong> <span id="modalLocal"></span></p>
+        </section>
+        <section class="curso-links">
+          <a id="linkMaterial" href="#" target="_blank" class="btn-sair hidden">Material</a>
+          <a id="linkArquivos" href="#" target="_blank" class="btn-sair hidden">Arquivos</a>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">© Biblioteca de Cursos</footer>
+  <script src="../JS/script.js"></script>
+</body>
+</html>
