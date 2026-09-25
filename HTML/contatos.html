@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../IMG/R_oficial.png">
+  <title>Contato - RocketGo</title>
+  <link rel="stylesheet" href="../CSS/style03.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">R</a>
+      <ul class="nav-links" id="menuNav">
+    <li><a href="../index.html">Central</a></li>
+        <li><a href="../HTML/sobre.html">Sobre</a></li>
+        <li><a href="../HTML/faq.html">FAQ</a></li>
+        <li><a href="../HTML/biblioteca.html">Biblioteca</a></li>
+        <li><a href="../HTML/servicos.html">Serviços</a></li>
+        <li><a href="../HTML/contatos.html">Contato</a></li>
+        <li id="menuCadastro"><a href="../HTML/cadastro.html">Trabalhe conosco</a></li>
+        <li id="menuLogin"><a href="../HTML/login.html">Login</a></li>
+        <li id="menuConta" style="display: none;"><a href="../HTML/dados.html">Dados da Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sobre-page">
+      <section class="sobre-container">
+        <h1>Entre em Contato</h1>
+        <p>Tem alguma dúvida sobre nossos meios, sugestão ou deseja saber mais sobre nossa família? Envie uma mensagem para nossa equipe.</p>
+
+        <section class="parceiros-baloes">
+
+          <!-- Bloco de localização -->
+          <section class="parceiro-balao left">
+            <section class="balao-conteudo">
+              <h3>Localização</h3>
+              <p>
+                Rocket Corporation — Saffron City, Kanto,<br>
+               Distrito empresarial, próximo à Silph Co.
+              </p>
+            </section>
+          </section>
+
+          <!-- Bloco de redes sociais -->
+          <section class="parceiro-balao right">
+            <section class="balao-conteudo">
+              <h3>Siga-nos</h3>
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="#"><img src="../IMG/X-removebg-preview.png" width="40" height="40" alt="Twitter/X"></a>
+                <a href="#"><img src="../IMG/insta-removebg-preview.png" width="40" height="40" alt="Instagram"></a>
+                <a href="#"><img src="../IMG/face-removebg-preview.png" width="40" height="40" alt="Facebook"></a>
+              </div>
+              <p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 Política de privacidade</p>
+            </section>
+          </section>
+
+          <!-- Formulário de contato -->
+          <section class="parceiro-balao left">
+            <section class="balao-conteudo">
+              <h3>Formulário de Contato</h3>
+              <form id="formContato" style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
+                <input type="text" id="nomeContato" placeholder="Seu nome" required>
+                <input type="email" id="emailContato" placeholder="Seu e-mail" required>
+                <textarea id="mensagemContato" rows="4" placeholder="Digite sua mensagem..." required></textarea>
+                <button type="submit" class="btn-sair" style="width: fit-content; align-self: flex-start;">Enviar</button>
+              </form>
+            </section>
+          </section>
+
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; RocketGO — Apenas nós podemos nos apropriar do que é alheio.</p>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+  <script>
+    // Exemplo simples de interação usando seu JS padrão
+    document.getElementById("formContato").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nome = document.getElementById("nomeContato").value.trim();
+      const email = document.getElementById("emailContato").value.trim();
+      const msg = document.getElementById("mensagemContato").value.trim();
+
+      if (!nome || !email || !msg) {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+        return;
+      }
+
+      alert(`Mensagem enviada com sucesso!\n\nNome: ${nome}\nE-mail: ${email}`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

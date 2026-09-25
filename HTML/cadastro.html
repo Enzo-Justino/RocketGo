@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../IMG/R_oficial.png">
+  <title>Cadastro - RocketGo</title>
+  <link rel="stylesheet" href="../CSS/style03.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">R</a>
+      <ul class="nav-links" id="menuNav">
+        <li><a href="../index.html">Central</a></li> <!--class highlight-->
+        <li><a href="../HTML/sobre.html">Sobre</a></li>
+        <li><a href="../HTML/faq.html">FAQ</a></li>
+        <li><a href="../HTML/biblioteca.html">Biblioteca</a></li>
+        <li><a href="../HTML/servicos.html">Serviços</a></li>
+        <li><a href="../HTML/contatos.html">Contato</a></li>
+        <li id="menuCadastro"><a href="../HTML/cadastro.html">Trabalhe conosco</a></li>
+        <li id="menuConta" style="display: none;"><a href="dados.html">Dados da Conta</a></li>
+        <li id="menuLogin"><a href="../HTML/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="container">
+    <form id="formCadastro" class="form-box">
+      <h2>Identifique-se</h2>
+
+      <!-- Etapa 1: Acesso -->
+      <div class="step active" id="step1">
+        <input type="text" id="nome" placeholder="Nome completo" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+        <button type="button" class="btn-next">Próximo</button>
+      </div>
+
+      <!-- Etapa 2: Dados pessoais -->
+      <div class="step" id="step2">
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <input type="date" id="dataNascimento" required>
+        <input type="text" id="cidade" placeholder="Cidade" required>
+        <input type="text" id="estado" placeholder="Estado" required>
+        <button type="button" class="btn-prev">Voltar</button>
+        <button type="button" class="btn-next">Próximo</button>
+      </div>
+
+      <!-- Etapa 3: Interesses e Uploads -->
+      <div class="step" id="step3">
+        <label>Ave favorita:</label>
+        <select id="areaInteresse" required>
+          <option value="">Selecione</option>
+          <option>Moltres</option>
+          <option>Articuno</option>
+          <option>Zapdos</option>
+          <option>Outro</option>
+        </select>
+
+        <label>Situação atual:</label>
+        <select id="situacao" required>
+          <option value="">Selecione</option>
+          <option>Buscando emprego</option>
+          <option>Estudando</option>
+          <option>Treinador Pokemon</option>
+          <option>Outro</option>
+        </select>
+
+        <label>Documento de Identificação (PDF ou imagem):</label>
+<label for="documento" class="file-label">Escolher arquivo</label>
+<input type="file" id="documento" accept=".pdf,.jpg,.jpeg,.png" required>
+<span id="docName" class="file-name">Nenhum arquivo escolhido</span>
+<br>
+
+<label>Pokemon Favorito (PDF ou imagem):</label>
+<label for="exame" class="file-label">Escolher arquivo</label>
+<input type="file" id="exame" accept=".pdf,.jpg,.jpeg,.png" required>
+<span id="exameName" class="file-name">Nenhum arquivo escolhido</span>
+
+<br><br>
+        <label class="termos">
+          
+          Aceito os termos de uso e política de privacidade
+          <input type="checkbox" required>
+        </label>
+        <button type="button" class="btn-prev">Voltar</button>
+        <button type="submit" class="btn">Finalizar Cadastro</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; RocketGO — Apenas nós podemos nos apropriar do que é alheio.</p>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>

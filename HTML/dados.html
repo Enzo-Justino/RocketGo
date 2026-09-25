@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../IMG/R_oficial.png">
+  <title>Minha Conta - RocketGo</title>
+  <link rel="stylesheet" href="../CSS/style03.css" />
+</head>
+<body>
+   <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">R</a>
+      <ul class="nav-links" id="menuNav">
+        <li><a href="../index.html">Central</a></li>
+        <li><a href="../HTML/sobre.html">Sobre</a></li>
+        <li><a href="../HTML/faq.html">FAQ</a></li>
+        <li><a href="../HTML/biblioteca.html">Biblioteca</a></li>
+        <li><a href="../HTML/servicos.html">Serviços</a></li>
+        <li><a href="../HTML/contatos.html">Contato</a></li>
+        <li id="menuCadastro"><a href="../HTML/cadastro.html">Trabalhe conosco</a></li>
+        <li id="menuLogin"><a href="../HTML/login.html">Login</a></li>
+        <li id="menuConta" style="display: none;"><a href="../HTML/dados.html">Dados da Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="perfil-wrapper">
+    <section class="perfil-container">
+      <h2>Minha Conta</h2>
+      <div class="info-grid" id="perfil">
+        <!-- Dados inseridos via script.js -->
+      </div>
+      <button class="btn-sair" onclick="logout()">Sair</button>
+    </serction>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; RocketGO — Apenas nós podemos nos apropriar do que é alheio.</p>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>
